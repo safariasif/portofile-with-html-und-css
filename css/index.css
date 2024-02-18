@@ -714,8 +714,8 @@ transition: 0.5s;
 .contact .form h2 span {
   color: var(--main-color);
 }
-.contact .form .title::before,
-.title::after {
+.contact .form .contact-title::before,
+.contact-title::after {
   position: absolute;
   left: 0;
   content: "";
@@ -724,12 +724,12 @@ transition: 0.5s;
   border-radius: 50%;
   background-color: var(--main-color);
 }
-.contact .form .title::before {
+.contact .form .contact-title::before {
   width: 20px;
   height: 20px;
   background-color: var(--text-color);
 }
-.contact .form .title::after {
+.contact .form .contact-title::after {
   width: 20px;
   height: 20px;
   animation: pulse 1s linear infinite;
