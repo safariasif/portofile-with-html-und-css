@@ -507,7 +507,7 @@ section {
   height: 380px;
   overflow: hidden;
   background-color: var(--second-bg-color);
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
   padding: 30px 0px;
   transition: 0.4s;
@@ -684,4 +684,289 @@ transition: 0.5s;
   .bar-progress
   .bar {
   width: 55%;
+}
+
+/* contact */
+.contact {
+  width: 35%;
+  margin: 10rem auto;
+  background: linear-gradient(#112e42, #081b29) padding-box,
+    linear-gradient(145deg, transparent 35%, #ededed, #00abf0) border-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+/* --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0; */
+.contact .form h2 {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 40px;
+}
+.contact .form h2 span {
+  color: var(--main-color);
+}
+.contact .form .title::before,
+.title::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+.contact .form .title::before {
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+}
+.contact .form .title::after {
+  width: 20px;
+  height: 20px;
+  animation: pulse 1s linear infinite;
+}
+.contact .form {
+  width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 20px;
+}
+.contact .form .flex {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+.form label {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: gray;
+  font-size: 1.2rem;
+  cursor: text;
+  transition: 0.3s ease;
+}
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9rem;
+}
+.form label .input:focus + span,
+.form .input:valid + span {
+  top: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.form label .input:valid + span {
+  color: green;
+}
+
+.form label .textarea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+.form label .textarea + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: gray;
+  font-size: 1.2rem;
+  cursor: text;
+  transition: 0.3s ease;
+}
+.form label .textarea:placeholder-shown + span {
+  bottom: 10px;
+  left: 40px;
+  font-size: 0.9rem;
+}
+.form label .textarea:focus + span,
+.form label .textarea:valid + span {
+  bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.form label .textarea:valid + span {
+  color: green;
+}
+
+
+
+/* animation in form */
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+.btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-17 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: var(--main-color);
+  background-image: none;
+  color: var(--second-bg-color);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-17:disabled {
+  cursor: default;
+}
+
+.btn-17:-moz-focusring {
+  outline: auto;
+}
+
+.btn-17 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-17 [hidden] {
+  display: none;
+}
+
+.btn-17 {
+  border-radius: 99rem;
+  border-width: 1.5px;
+  padding: 0.5rem 3rem;
+  z-index: 0;
+}
+
+.btn-17,
+.btn-17 .text-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-17 .text-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.btn-17 .text {
+  display: block;
+  position: relative;
+}
+
+.btn-17:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.btn-17:after,
+.btn-17:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.btn-17:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+
+.btn-17:hover:before {
+  --progress: 100%;
+}
+
+.btn-17:hover:after {
+  --progress: -102%;
 }
