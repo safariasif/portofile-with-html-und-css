@@ -816,8 +816,6 @@ transition: 0.5s;
   color: green;
 }
 
-
-
 /* animation in form */
 @keyframes pulse {
   from {
@@ -830,7 +828,6 @@ transition: 0.5s;
     opacity: 0;
   }
 }
-
 
 .btn-17,
 .btn-17 *,
@@ -969,4 +966,51 @@ transition: 0.5s;
 
 .btn-17:hover:after {
   --progress: -102%;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 20px 0px;
+}
+.footer .left-side-footer p {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+.footer .left-side-footer p span {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.footer .right-side-footer a{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-bg-color);
+  border-radius: 5px;
+  position: relative;
+  transition: 0.4s;
+  z-index: 1;
+}
+.footer .right-side-footer a .fa-arrow-up{
+  font-size: 20px;
+  color: var(--text-color);
+}
+.footer .right-side-footer a::before{
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.footer .right-side-footer a:hover::before{
+  width: 100%;
 }
